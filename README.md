@@ -1,7 +1,8 @@
 ###tf-aws-mod-kmskey
 
 * This module will create a KMS key.  
-* You can acc[pt the default security policy for the key, or specify a json document with a custom security policy.In most cases the default security policy should be adequate
+* You can accept the default security policy for the key, or specify a json document with a custom security policy.  
+* Sample security policy docs are in ./sample_policy_docs and may be used as templates (see below)
 * You may optionally  create an alias for the KMS key.
 
 
@@ -58,7 +59,7 @@ output "alias_arn" {
 ##Sample Policy Docs
 in the subfolder sample_policy_docs are several sample key security policies.  Items that need to be customized for your environment are in all caps (e.g. ACCOUNT_ID) and should be relatively self explanatory. 
 
-You may consider using these as a template in your solution.
+You may consider using these as a template in your solution, see the sample code below:
 
 ```
 data "aws_caller_identity" "current" {}
